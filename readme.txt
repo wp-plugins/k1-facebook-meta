@@ -1,4 +1,4 @@
-=== Klan1 Common WP Functions ===
+=== Klan1 WP Facebook Meta ===
 Contributors: k1-j0hnd03
 Donate link: http://klan1.com/
 Tags: facebook open graph, facebook meta, open graph meta, meta, facebook, open graph, google, google plus, google+, klan1
