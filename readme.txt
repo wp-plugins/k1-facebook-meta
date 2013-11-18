@@ -11,6 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Basic zero-config Facebook Open Graph meta generator.
 
 == Description ==
+IMPORTANT: This plugin depends on our plugin called "Klan1 Common WP Functions".
 
 This plugin generate the basic Facebook metas and do not have any configuration to do it. Those are valid for Google Plus too (I think!).
 
@@ -21,8 +22,6 @@ For the `og:image` this plugin will take automatically the featured image or the
 <meta property="og:image" content="{TIMTHUMB FEATURED IMAGE URL}"/> 
 <meta property="og:url" content="{PAGE OR POST URL}"/> 
 <meta property="og:site_name" content="{BLOG NAME}"/>`
-
-IMPORTANT: This plugin depends on our plugin called "Klan1 Common WP Functions".
 
 == Installation ==
 
