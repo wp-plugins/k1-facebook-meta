@@ -1,10 +1,9 @@
 <?php
-
 /*
   Plugin Name: Klan1 WP Facebook Meta
   Plugin URI: http://www.klan1.com
   Description: Basic zero-config Facebook Open Graph metada generator.
-  Version: 0.3
+  Version: 0.4
   Author: Alejandro Trujillo J. - J0hnD03
   Author URI: http://www.facebook.com/j0hnd03
  */
@@ -32,13 +31,46 @@
 
  */
 
-// Requisites 
-if (!defined("K1_FUNCTIONS") && (K1_FUNCTIONS_VER >= 0.3)) {
-    return new WP_Error('Klan1 WP List Subpages', __("The plugin 'Klan1 Common WP Functions' ver > 0.3.3 is needed, please install it first."));
-} else {
-    define("K1FM_VER", 0.3);
+// CHECK PREREQUISITES K1FM
+function check_k1fm_prerequisites() {
+    global $k1_wp_error;
+    $admin_url = get_admin_url();
+    $k1_functions_install_url = $admin_url . "/plugin-install.php?tab=plugin-information&plugin=klan1-functions&TB_iframe=true&width=600&height=550";
+    $html_link_to_install = "<a href='{$k1_functions_install_url}' class='thickbox' title='" . _("More information about Klan1 Common WP Functions") . "'>" . _("View details and install/update here") . "</a>";
+    $WP_Error_install_msg = __("<p>The plugin 'Klan1 Common WP Functions' ver >= 0.3 is needed, please install it first: </p>");
+    $WP_Error_update_msg = __("<p>The plugin 'Klan1 Common WP Functions' is outdated, please update it first: </p>");
+
+    if (!defined("K1_FUNCTIONS")) {
+        $k1_wp_error = new WP_Error('K1FM-NO-K1_FUNCTIONS', $WP_Error_install_msg . $html_link_to_install);
+    } else {
+        if (K1_FUNCTIONS_VER < 0.3) {
+            $k1_wp_error = new WP_Error('K1_FUNCTIONS-TO-UPDATE', $WP_Error_update_msg . $html_link_to_install);
+        } else {
+            define("K1FM_VER", 0.3);
+        }
+    }
+    if (isset($k1_wp_error)) {
+        if (is_admin()) {
+            add_action('admin_notices', 'k1fm_admin_notice');
+        } else {
+            echo $k1_wp_error->get_error_message();
+        }
+    }
 }
 
+add_action('init', 'check_k1fm_prerequisites', 1);
+
+function k1fm_admin_notice() {
+    global $k1_wp_error;
+    ?>
+    <div class="error">
+        <p><strong>Klan1 WP Facebook Meta: </strong><?php echo $k1_wp_error->get_error_message(); ?></p>
+    </div>
+    <?php
+    unset($k1_wp_error);
+}
+
+// PLUGIN CODE 
 function k1_add_facebook_meta() {
     global $post;
 
