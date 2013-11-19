@@ -11,7 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Basic zero-config Facebook Open Graph meta generator.
 
 == Description ==
-IMPORTANT: This plugin depends on our plugin called "[Klan1 Common WP Functions]" http://wordpress.org/plugins/klan1-functions/.
+**IMPORTANT**: This plugin requires **Klan1 Common WP Functions** plugin *http://wordpress.org/plugins/klan1-functions/.
 
 This plugin generate the basic Facebook metas and do not have any configuration to do it. Those are valid for Google Plus too (I think!).
 
