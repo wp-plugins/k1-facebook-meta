@@ -3,7 +3,7 @@ Contributors: k1-j0hnd03
 Donate link: http://klan1.com/
 Tags: facebook open graph, facebook meta, open graph meta, meta, facebook, open graph, google, google plus, google+, klan1
 Requires at least: 2.7
-Tested up to: 3.7.1
+Tested up to: 4.2.2
 Stable tag: init
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -40,5 +40,9 @@ No, this one works immediately on pages and post.
 not needed.
 
 == Changelog ==
+= 0.4.1 =
+Image for share is now 600x315px and crop is aligned from top
+= 0.4 =
+Code fixed
 = 0.3 =
 First upload to WP repository.

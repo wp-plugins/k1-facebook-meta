@@ -3,7 +3,7 @@
   Plugin Name: Klan1 WP Facebook Meta
   Plugin URI: http://www.klan1.com
   Description: Basic zero-config Facebook Open Graph metada generator.
-  Version: 0.4
+  Version: 0.4.1
   Author: Alejandro Trujillo J. - J0hnD03
   Author URI: http://www.facebook.com/j0hnd03
  */
@@ -78,7 +78,7 @@ function k1_add_facebook_meta() {
         $fb_tags_values = array(
             "title" => $post->post_title . " @ " . get_bloginfo("name"),
             "type" => "article",
-            "image" => k1_get_post_timthumb_img_url($post->ID, 116, 116, 1, "c"),
+            "image" => k1_get_post_timthumb_img_url($post->ID, 600, 315, 1, "t"),
             "url" => get_permalink($post->ID),
             "site_name" => get_bloginfo("name")
         );
