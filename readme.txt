@@ -15,7 +15,7 @@ Basic zero-config Facebook Open Graph meta generator.
 
 This plugin generate the basic Facebook metas and do not have any configuration to do it. Those are valid for Google Plus too (I think!).
 
-For the `og:image` this plugin will take automatically the featured image or the first image attachment avaliable to crop it to 116x116. The others tag are described bellow: 
+For the `og:image` this plugin will take automatically the featured image or the first image attachment avaliable to crop it to 600 x 315. The others tag are described bellow: 
 
 `<meta property="og:title" content="{POST TITLE @ BLOG TITLE}"/> 
 <meta property="og:type" content="article"/> 
