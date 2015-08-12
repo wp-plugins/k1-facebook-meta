@@ -3,7 +3,7 @@ Contributors: k1-j0hnd03
 Donate link: http://klan1.com/
 Tags: facebook open graph, facebook meta, open graph meta, meta, facebook, open graph, google, google plus, google+, klan1
 Requires at least: 2.7
-Tested up to: 4.2.2
+Tested up to: 4.2.4
 Stable tag: init
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
